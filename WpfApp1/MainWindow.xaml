@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#9999cd"/>
+        <Image Source="/Resources/LogoFox.png" HorizontalAlignment="Left"/>
+        <TextBlock Text="Fox Travel" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid Grid.Row="2" Background="#9999cd"/>
+        <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Name="MainFrame"/>
+        <Button Content="Back" Name="Btnback" HorizontalAlignment="Right" Margin="10" Click="Btnback_Click" />
     </Grid>
 </Window>

@@ -23,6 +23,25 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+           MainFrame.Navigate(new HomePage());
+            Manager.MainFrame = MainFrame;
+        }
+
+        private void Btnback_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.GoBack();
+        }
+
+        private void MainFrame_ContentRendered(object sender, EventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                Btnback.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Btnback.Visibility= Visibility.Hidden;
+            }
         }
     }
 }

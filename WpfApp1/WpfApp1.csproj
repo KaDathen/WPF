@@ -35,9 +35,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,12 +65,48 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Country.cs">
+      <DependentUpon>FoxTravel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FoxTravel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoxTravel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FoxTravel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoxTravel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FoxTravel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoxTravel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Hotel.cs">
+      <DependentUpon>FoxTravel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HotelComment.cs">
+      <DependentUpon>FoxTravel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HotelImage.cs">
+      <DependentUpon>FoxTravel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>FoxTravel.tt</DependentUpon>
+    </Compile>
     <Compile Include="TextPage.xaml.cs">
       <DependentUpon>TextPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tour.cs">
+      <DependentUpon>FoxTravel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Type.cs">
+      <DependentUpon>FoxTravel.tt</DependentUpon>
     </Compile>
     <Page Include="HomePage.xaml">
       <SubType>Designer</SubType>
@@ -102,6 +147,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="FoxTravel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FoxTravel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="FoxTravel.edmx.diagram">
+      <DependentUpon>FoxTravel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -115,6 +168,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\LogoFox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FoxTravel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FoxTravel.edmx</DependentUpon>
+      <LastGenOutput>FoxTravel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="FoxTravel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FoxTravel.edmx</DependentUpon>
+      <LastGenOutput>FoxTravel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

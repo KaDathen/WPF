@@ -95,6 +95,9 @@
     <Compile Include="HotelImage.cs">
       <DependentUpon>FoxTravel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ListView.xaml.cs">
+      <DependentUpon>ListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>FoxTravel.tt</DependentUpon>
@@ -109,6 +112,10 @@
       <DependentUpon>FoxTravel.tt</DependentUpon>
     </Compile>
     <Page Include="HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -183,6 +190,7 @@
       <DependentUpon>FoxTravel.edmx</DependentUpon>
       <LastGenOutput>FoxTravel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\Photo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

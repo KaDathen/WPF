@@ -25,16 +25,16 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-             MainFrame.Navigate(new HomePage());
+             MainFrame.Navigate(new ListView());
             Manager.MainFrame = MainFrame;
 
-            ImportTours();
+            //ImportTours();
         }
 
         private void ImportTours()
         {
-            var fileData = File.ReadAllLines(@"C:\Users\KaDathen\source\repos\WPF\WpfApp1\bin\Туры.txt");
-            var images = Directory.GetFiles(@"C:\Users\KaDathen\source\repos\WPF\WpfApp1\bin\Туры фото");
+            var fileData = File.ReadAllLines(@"..\Туры.txt");
+            var images = Directory.GetFiles(@"..\Туры фото");
 
             foreach ( var line in fileData ) 
             {
@@ -49,7 +49,7 @@ namespace WpfApp1
 
                 };
 
-                foreach(var tourType in data[5].Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries))
+                foreach(var tourType in data[5].Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries))
                 {
                     var currentType = FoxTravelEntities.GetContext().Type.ToList().FirstOrDefault(p => p.Name == tourType);
                     if (currentType != null) 

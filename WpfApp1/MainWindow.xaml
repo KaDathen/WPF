@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="940" MinHeight="450" MinWidth="800">
+        Title="MainWindow" Height="450" Width="940" MinHeight="450" MinWidth="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="75"/>
@@ -21,5 +21,6 @@
         <Button Content="Back" Name="Btnback" HorizontalAlignment="Right" Margin="10" Width="150" Click="Btnback_Click" />
         <Button Content="Edit Hotel" Grid.Row="2" Name="BtnEditHotel" HorizontalAlignment="Left" Margin="10 0 0 0" Width="150" Click="BtnEditHotel_Click" />
         <Button Content="Edit Tour" Grid.Row="2" Name="BtnEditTour" HorizontalAlignment="Right" Margin="10 0 0 0" Width="150" Click="BtnEditTour_Click" />
+        <TextBlock Grid.Row="2" Name="users" HorizontalAlignment="Left" Margin="200 0 0 0" FontSize="15" />
     </Grid>
 </Window>

@@ -25,9 +25,10 @@
         <TextBlock Text="Авторизация" FontSize="30" Grid.ColumnSpan="4"/>
         <TextBlock Grid.Row="1" Grid.Column="1" Text="Логин" FontSize="22"/>
         <TextBlock Grid.Row="2" Grid.Column="1"  Text="Пароль" FontSize="22"/>
-        <TextBox Name="Login" Grid.Row="1" Grid.Column="2"  Height="30" Margin="10" />
-        <TextBox Name="Password" Grid.Row="2" Grid.Column="2"  Height="30" Margin="10" />
+        <TextBox Name="Login" Grid.Row="1" Grid.Column="2"  Height="30" Margin="10"/>
+        <PasswordBox Name="Password" Grid.Row="2" Grid.Column="2"  Height="30" Margin="10"/>
         <Button Grid.Row="3" Grid.ColumnSpan="4" Content="Вход" Name="Btn_auth" Click="Btn_auth_Click" />
+        
     </Grid>
     
 </Page>

@@ -12,5 +12,14 @@ namespace WpfApp1
         public static bool Auth { get; set; }
         public static string Login { get; set; }
         public static bool Admin { get; set; }
+
+        public static string text
+        {
+            get
+            {
+                return (Admin) ? "Админ" : "Менеджер";
+            }
+
+        }
     }
 }

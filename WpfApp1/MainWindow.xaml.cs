@@ -89,10 +89,13 @@ namespace WpfApp1
             if (Status.Auth == true)
             {
                 BtnLogin.Content = "Login out";
+                users.Visibility = Visibility.Visible;
+                users.Text = "Login:" + Status.Login + "; Status:"+Status.text;
             }
             else
             {
                 BtnLogin.Content = "Login";
+                users.Visibility = Visibility.Hidden;
             }
             if(Status.Auth == false)
             {
@@ -142,6 +145,11 @@ namespace WpfApp1
         private void BtnEditTour_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new EditTour());
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

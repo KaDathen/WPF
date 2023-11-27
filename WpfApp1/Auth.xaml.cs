@@ -33,9 +33,10 @@ namespace WpfApp1
            var aut = FoxTravelEntities.GetContext().User.ToList();
             for(int i = 0; i < aut.Count; i++)
             {
-                if (aut[i].Login.ToString() == Login.Text && aut[i].Password.ToString() == Password.Text ) 
+                if (aut[i].Login.ToString() == Login.Text && aut[i].Password.ToString() == Password.Password ) 
                 {
                     Status.Auth = true;
+                    Status.Login = Login.Text;
                     if (aut[i].IsAdmin == true)
                     {
                         Status.Admin = true;

@@ -68,5 +68,10 @@ namespace WpfApp1
         {
             UpdateTours();
         }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            UpdateTours();
+        }
     }
 }

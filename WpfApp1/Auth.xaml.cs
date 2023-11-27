@@ -29,6 +29,7 @@ namespace WpfApp1
 
         private void Btn_auth_Click(object sender, RoutedEventArgs e)
         {
+           bool b = false;
            var aut = FoxTravelEntities.GetContext().User.ToList();
             for(int i = 0; i < aut.Count; i++)
             {
@@ -39,15 +40,18 @@ namespace WpfApp1
                     {
                         Status.Admin = true;
                     }
-                    MessageBox.Show("Вход");
+                    b = true;
+                    MessageBox.Show("Авторизация успешна");
                     Manager.MainFrame.GoBack();
-                }
-                else
-                {
-                    MessageBox.Show("Неа");
+                    break;
                 }
             }
+            if(b == false)
+            {
+                MessageBox.Show("Ошибка авторизации!");
+            }
             
+
         }
     }
 }

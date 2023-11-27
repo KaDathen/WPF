@@ -48,7 +48,6 @@ namespace WpfApp1
 
             if (_currentHotel.ID == 0)
             {
-
                 FoxTravelEntities.GetContext().Hotel.Add(_currentHotel);
             }
             try

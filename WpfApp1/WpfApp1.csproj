@@ -71,6 +71,9 @@
     <Compile Include="Country.cs">
       <DependentUpon>FoxTravel.tt</DependentUpon>
     </Compile>
+    <Compile Include="EditTour.xaml.cs">
+      <DependentUpon>EditTour.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FoxTravel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,6 +115,9 @@
     <Compile Include="Tour.cs">
       <DependentUpon>FoxTravel.tt</DependentUpon>
     </Compile>
+    <Compile Include="TourCr.xaml.cs">
+      <DependentUpon>TourCr.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Type.cs">
       <DependentUpon>FoxTravel.tt</DependentUpon>
     </Compile>
@@ -119,6 +125,10 @@
       <DependentUpon>FoxTravel.tt</DependentUpon>
     </Compile>
     <Page Include="Auth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditTour.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,6 +153,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="TextPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TourCr.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

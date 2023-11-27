@@ -97,10 +97,19 @@ namespace WpfApp1
             if(Status.Auth == false)
             {
                 BtnEditHotel.Visibility = Visibility.Hidden;
+                BtnEditTour.Visibility = Visibility.Hidden;
             }
             else
             {
                 BtnEditHotel.Visibility = Visibility.Visible;
+                if(Status.Admin == true)
+                {
+                    BtnEditTour.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    BtnEditTour.Visibility= Visibility.Hidden;
+                }
             }
         }
 
@@ -127,7 +136,12 @@ namespace WpfApp1
 
         private void BtnEditHotel_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate (new HomePage());
+            MainFrame.Navigate(new HomePage());
+        }
+
+        private void BtnEditTour_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new EditTour());
         }
     }
 }

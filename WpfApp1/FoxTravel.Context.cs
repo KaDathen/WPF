@@ -12,7 +12,8 @@ namespace WpfApp1
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+    using System.Net;
+
     public partial class FoxTravelEntities : DbContext
     {
         private static FoxTravelEntities _context;
@@ -33,7 +34,7 @@ namespace WpfApp1
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
         public virtual DbSet<Country> Country { get; set; }
         public virtual DbSet<Hotel> Hotel { get; set; }
         public virtual DbSet<HotelComment> HotelComment { get; set; }
@@ -41,5 +42,6 @@ namespace WpfApp1
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tour> Tour { get; set; }
         public virtual DbSet<Type> Type { get; set; }
+        public virtual DbSet<User> User { get; set; }
     }
 }

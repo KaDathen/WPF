@@ -5,18 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="940" MinHeight="450" MinWidth="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="75"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="45"/>
         </Grid.RowDefinitions>
         <Grid Background="#9999cd"/>
         <Image Source="/Resources/LogoFox.png" HorizontalAlignment="Left"/>
+        <Button Content="Login" Name="BtnLogin" HorizontalAlignment="Left" Margin="60 0" Width="150" Click="BtnLogin_Click" />
         <TextBlock Text="Fox Travel" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Grid Grid.Row="2" Background="#9999cd"/>
         <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Name="MainFrame"/>
-        <Button Content="Back" Name="Btnback" HorizontalAlignment="Right" Margin="10" Click="Btnback_Click" />
+        <Button Content="Back" Name="Btnback" HorizontalAlignment="Right" Margin="10" Width="150" Click="Btnback_Click" />
+        <Button Content="Edit Hotel" Grid.Row="2" Name="BtnEditHotel" HorizontalAlignment="Left" Margin="10 0 0 0" Width="150" Click="BtnEditHotel_Click" />
     </Grid>
 </Window>

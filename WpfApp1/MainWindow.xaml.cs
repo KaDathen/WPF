@@ -85,7 +85,49 @@ namespace WpfApp1
             {
                 Btnback.Visibility= Visibility.Hidden;
             }
+
+            if (Status.Auth == true)
+            {
+                BtnLogin.Content = "Login out";
+            }
+            else
+            {
+                BtnLogin.Content = "Login";
+            }
+            if(Status.Auth == false)
+            {
+                BtnEditHotel.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                BtnEditHotel.Visibility = Visibility.Visible;
+            }
         }
 
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            if (Status.Auth == true)
+            {
+                if (MessageBox.Show($"Вы точно хотите выйти из своей учётной записи ?", "Внимание",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                { 
+                    Status.Auth = false;
+                    Status.Admin = false;
+                    Status.Login = null;
+                }
+                MainFrame.Navigate(new ListView());
+                MainFrame.Navigate(new ListView());
+            }
+            else
+            {
+                MainFrame.Navigate(new Auth());
+            }
+            
+        }
+
+        private void BtnEditHotel_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate (new HomePage());
+        }
     }
 }

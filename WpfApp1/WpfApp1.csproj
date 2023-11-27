@@ -65,6 +65,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Auth.xaml.cs">
+      <DependentUpon>Auth.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Country.cs">
       <DependentUpon>FoxTravel.tt</DependentUpon>
     </Compile>
@@ -99,6 +102,7 @@
       <DependentUpon>ListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager.cs" />
+    <Compile Include="Status.cs" />
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>FoxTravel.tt</DependentUpon>
     </Compile>
@@ -111,6 +115,13 @@
     <Compile Include="Type.cs">
       <DependentUpon>FoxTravel.tt</DependentUpon>
     </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>FoxTravel.tt</DependentUpon>
+    </Compile>
+    <Page Include="Auth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -180,6 +191,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\Photo.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="FoxTravel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>FoxTravel.edmx</DependentUpon>
@@ -190,7 +204,6 @@
       <DependentUpon>FoxTravel.edmx</DependentUpon>
       <LastGenOutput>FoxTravel.cs</LastGenOutput>
     </Content>
-    <Resource Include="Resources\Photo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
